@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_name_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Name Comic"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_art"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_comic"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_comic"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_comic"
+            app:srcCompat="@drawable/i8" />
+
+        <LinearLayout
+            android:id="@+id/layout_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/img_art"
+            app:layout_constraintStart_toStartOf="@+id/img_art"
+            app:layout_constraintTop_toBottomOf="@+id/img_art">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Author: "
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="author" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_created_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/layout_author"
+            app:layout_constraintStart_toStartOf="@+id/layout_author"
+            app:layout_constraintTop_toBottomOf="@+id/layout_author">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="created date: "
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_create_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/layout_created_date"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="@+id/layout_created_date"
+            app:layout_constraintTop_toBottomOf="@+id/layout_created_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="10dp"
+            android:text="Description: "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:text="Description: "
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/tv_description"
+            app:layout_constraintStart_toStartOf="@+id/tv_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="28dp"
+            android:text="Detail"
+            android:background="@drawable/bg_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tv_desc"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_desc"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_more_vert_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
